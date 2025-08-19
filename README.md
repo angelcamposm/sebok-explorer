@@ -1,6 +1,6 @@
-# Explorador Interactivo del SEBoK
+# SEBoK Explorer
 
-![Banner del Explorador SEBoK](https://placehold.co/1200x400/007ea7/ffffff?text=Explorador+Interactivo+del+SEBoK)
+![Banner del Explorador SEBoK](https://placehold.co/1200x400/007ea7/ffffff?text=SEBoK+Explorer)
 
 ## 📖 Descripción del Proyecto
 
