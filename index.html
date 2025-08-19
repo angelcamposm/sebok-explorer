@@ -67,6 +67,7 @@
                 <a href="#introduction" class="text-gray-600 hover:text-[#007ea7]">Introducción</a>
                 <a href="#core-explorer" class="text-gray-600 hover:text-[#007ea7]">Explorador</a>
                 <a href="#lifecycle" class="text-gray-600 hover:text-[#007ea7]">Ciclo de Vida</a>
+                <a href="#enabling" class="text-gray-600 hover:text-[#007ea7]">Habilitación</a>
                 <a href="#applications" class="text-gray-600 hover:text-[#007ea7]">Aplicaciones</a>
                 <a href="#future" class="text-gray-600 hover:text-[#007ea7]">Futuro</a>
             </div>
@@ -78,7 +79,7 @@
         <section id="introduction" class="text-center py-16">
             <h1 class="text-4xl md:text-6xl font-black text-[#003459] leading-tight">El Universo del SEBoK</h1>
             <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Una aplicación interactiva para navegar el Cuerpo de Conocimiento de la Ingeniería de Sistemas, la guía definitiva que define la disciplina.</p>
-            <p class="mt-6 text-base text-gray-500 max-w-3xl mx-auto">El SEBoK es una guía viva, en formato wiki, que establece una línea base de conocimiento universalmente aceptada. Su propósito es estructurar la disciplina, facilitar un entendimiento común y reducir los fallos en proyectos complejos al proporcionar un marco de referencia coherente y actualizado.</p>
+            <p class="mt-6 text-base text-gray-500 max-w-3xl mx-auto">El SEBoK es una guía viva, en formato wiki, que establece una línea base de conocimiento universalmente aceptada. Su propósito es estructurar la disciplina, facilitar un entendimiento común y reducir los fallos en proyectos complejos al proporcionar un marco de referencia coherente y actualizado. Su gobernanza tripartita (INCOSE, IEEE Systems Council y Stevens Institute of Technology) asegura su legitimidad y aceptación global.</p>
             
             <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#007ea7]">
@@ -147,15 +148,15 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#00a8e8]">
                                 <h4 class="font-bold text-lg text-[#003459]">Ciencia de Sistemas</h4>
-                                <p class="mt-2 text-sm text-gray-600">Campo interdisciplinario que estudia los sistemas complejos en la naturaleza y la sociedad para identificar patrones que trascienden las disciplinas tradicionales.</p>
+                                <p class="mt-2 text-sm text-gray-600">Campo interdisciplinario que estudia los sistemas complejos en la naturaleza y la sociedad para identificar patrones (p. ej., bucles de retroalimentación) que trascienden las disciplinas tradicionales.</p>
                             </div>
                             <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#007ea7]">
                                 <h4 class="font-bold text-lg text-[#003459]">Pensamiento Sistémico</h4>
-                                <p class="mt-2 text-sm text-gray-600">El paradigma integrador para comprender e intervenir en situaciones problemáticas, basándose en los principios y conceptos del paradigma de sistemas.</p>
+                                <p class="mt-2 text-sm text-gray-600">El paradigma integrador para comprender e intervenir en situaciones problemáticas. Implica ver interrelaciones en lugar de cadenas lineales de causa-efecto y procesos de cambio en lugar de instantáneas estáticas.</p>
                             </div>
                             <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#90e0ef]">
                                 <h4 class="font-bold text-lg text-[#003459]">Modelado de Sistemas</h4>
-                                <p class="mt-2 text-sm text-gray-600">Uso de representaciones simplificadas (modelos) para promover la comprensión, análisis, especificación y verificación de sistemas complejos.</p>
+                                <p class="mt-2 text-sm text-gray-600">Uso de representaciones simplificadas (modelos) para promover la comprensión, análisis, especificación y verificación de sistemas. Es la base de la Ingeniería de Sistemas Basada en Modelos (MBSE).</p>
                             </div>
                         </div>
                     </div>
@@ -208,19 +209,21 @@
                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">La Parte 3 del SEBoK, alineada con la norma ISO/IEC/IEEE 15288, detalla los procesos técnicos y de gestión que guían un sistema desde su concepción hasta su retiro.</p>
             </div>
             <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
-                        <h3 class="text-2xl font-bold text-[#003459] mb-4">Procesos Técnicos</h3>
+                        <h3 class="text-2xl font-bold text-[#003459] mb-6">Procesos Técnicos</h3>
+                        <p class="text-gray-600 mb-6">Estos procesos se centran en la realización del sistema, desde la comprensión del problema hasta la entrega y el mantenimiento de una solución que satisfaga a las partes interesadas.</p>
                         <ul class="space-y-4">
-                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">1.</span><div><strong class="text-gray-800">Definición de Concepto:</strong> Análisis de la misión y definición de las necesidades de las partes interesadas.</div></li>
-                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">2.</span><div><strong class="text-gray-800">Diseño de Arquitectura:</strong> Creación de la estructura fundamental del sistema (componentes y relaciones).</div></li>
-                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">3.</span><div><strong class="text-gray-800">Implementación:</strong> Realización de los elementos del sistema.</div></li>
-                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">4.</span><div><strong class="text-gray-800">Integración, Verificación y Validación (IV&V):</strong> Ensamblar, comprobar que se construyó correctamente y que cumple el propósito.</div></li>
-                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">5.</span><div><strong class="text-gray-800">Mantenimiento y Retiro:</strong> Sostenimiento del sistema en operación y su disposición final segura.</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-3 text-2xl">1.</span><div><strong class="text-gray-800">Definición de Concepto:</strong> Análisis de la misión y definición de las necesidades de las partes interesadas.</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-3 text-2xl">2.</span><div><strong class="text-gray-800">Diseño de Arquitectura:</strong> Creación de la estructura fundamental del sistema (componentes y relaciones).</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-3 text-2xl">3.</span><div><strong class="text-gray-800">Implementación:</strong> Realización de los elementos del sistema.</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-3 text-2xl">4.</span><div><strong class="text-gray-800">Integración, Verificación y Validación (IV&V):</strong> Ensamblar, comprobar que se construyó correctamente y que cumple el propósito.</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-3 text-2xl">5.</span><div><strong class="text-gray-800">Mantenimiento y Retiro:</strong> Sostenimiento del sistema en operación y su disposición final segura.</div></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-[#003459] mb-4">Procesos de Gestión</h3>
+                        <h3 class="text-2xl font-bold text-[#003459] mb-6">Procesos de Gestión</h3>
+                        <p class="text-gray-600 mb-6">Estos procesos apoyan la ejecución de los procesos técnicos, asegurando que el proyecto se mantenga dentro del presupuesto, el calendario y los objetivos de calidad.</p>
                         <ul class="space-y-4">
                             <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Planificación:</strong> Planificación técnica del proyecto de SE.</div></li>
                             <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Gestión de Riesgos:</strong> Identificación y mitigación de riesgos técnicos.</div></li>
@@ -229,6 +232,29 @@
                             <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Gestión de Decisiones:</strong> Proceso formal para la toma de decisiones técnicas.</div></li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
+        <section id="enabling" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003459]">Habilitación y Competencias: La Dimensión Humana</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">La Parte 5 del SEBoK se centra en el "lado humano", describiendo cómo habilitar la práctica de la SE a nivel organizacional, de equipo e individual.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-xl border-t-4 border-[#003459]">
+                    <h3 class="text-2xl font-bold text-[#003459] mb-4">Nivel Organizacional</h3>
+                    <p class="text-gray-600">Se enfoca en integrar la SE en la estrategia y cultura de la empresa. Implica definir las capacidades de SE necesarias, evaluar el rendimiento y superar las barreras para su adopción exitosa.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-xl border-t-4 border-[#007ea7]">
+                    <h3 class="text-2xl font-bold text-[#007ea7] mb-4">Nivel de Equipo</h3>
+                    <p class="text-gray-600">La SE es un esfuerzo de equipo. Esta área aborda la dinámica de grupo, la colaboración, la comunicación y el liderazgo técnico necesarios para que los equipos multidisciplinarios sean efectivos.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-xl border-t-4 border-[#00a8e8]">
+                    <h3 class="text-2xl font-bold text-[#00a8e8] mb-4">Nivel Individual</h3>
+                    <p class="text-gray-600">En última instancia, son las personas quienes realizan la SE. Cubre los roles, las competencias (p. ej., el marco de INCOSE), el desarrollo profesional y la importancia del comportamiento ético en la profesión.</p>
                 </div>
             </div>
         </section>
@@ -254,6 +280,7 @@
                             <button data-app="software" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Software y Ciberfísicos</button>
                             <button data-app="health" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Sanitario (Healthcare)</button>
                             <button data-app="auto" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Automoción</button>
+                            <button data-app="enterprise" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Empresarial (Enterprise)</button>
                         </div>
                         <div id="application-details" class="mt-4 p-4 bg-gray-50 rounded-lg border min-h-[150px]">
                             <p id="application-text" class="text-sm text-gray-700"></p>
@@ -268,7 +295,7 @@
         <section id="future" class="py-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#003459]">El Futuro es Emergente</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">La Parte 8 del SEBoK actúa como un motor de evolución, explorando temas de vanguardia que están dando forma al futuro de la disciplina. El tamaño de las burbujas representa su creciente impacto.</p>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">La Parte 8 del SEBoK, alineada con la Visión 2035 de INCOSE, actúa como un motor de evolución, explorando temas de vanguardia que están dando forma al futuro de la disciplina. El tamaño de las burbujas representa su creciente impacto.</p>
             </div>
             <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
                 <div class="chart-container">
@@ -304,7 +331,8 @@
                 aero: "Sector de origen de la SE. Es fundamental para gestionar la complejidad extrema, los largos ciclos de vida y los estrictos requisitos de seguridad y fiabilidad de los sistemas aeroespaciales y de defensa. El uso de MBSE es crucial aquí.",
                 software: "La SE proporciona el marco para gestionar el desarrollo de software complejo y sistemas ciberfísicos. Los modelos de ciclo de vida (p. ej., Modelo en V) son clave para alinear el desarrollo de hardware y software.",
                 health: "Un campo en crecimiento para la SE, que aborda desafíos sistémicos de seguridad del paciente y asequibilidad. Se aplica en el desarrollo de dispositivos médicos regulados y en la tecnología de información sanitaria.",
-                auto: "El vehículo moderno es un complejo sistema de sistemas. La SE es esencial para gestionar la integración de componentes mecánicos, electrónicos y de software, así como la cadena de suministro y la configuración del producto."
+                auto: "El vehículo moderno es un complejo sistema de sistemas. La SE es esencial para gestionar la integración de componentes mecánicos, electrónicos y de software, así como la cadena de suministro y la configuración del producto.",
+                enterprise: "Aplica los principios de SE a la empresa en su totalidad, viéndola como un sistema complejo. Se enfoca en la planificación, diseño y mejora de la empresa para lograr sus objetivos estratégicos, abordando las interacciones entre personas, procesos y tecnología."
             };
 
             function updatePartDetails(partNumber) {
@@ -353,7 +381,7 @@
             });
             
             new Chart(document.getElementById('applicationsBarChart'), {
-                type: 'bar', data: { labels: ['Aeroespacial y Defensa', 'Software y Ciberfísicos', 'Sanitario', 'Automoción', 'Servicios', 'Empresarial'], datasets: [{ label: 'Relevancia', data: [95, 92, 85, 88, 75, 70], backgroundColor: palette.mainBlue, borderRadius: 5 }] },
+                type: 'bar', data: { labels: ['Aeroespacial y Defensa', 'Software y Ciberfísicos', 'Sanitario', 'Automoción', 'Empresarial', 'Servicios'], datasets: [{ label: 'Relevancia', data: [95, 92, 85, 88, 80, 75], backgroundColor: palette.mainBlue, borderRadius: 5 }] },
                 options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 100, grid: { color: '#e9ecef' } }, y: { grid: { display: false } } }, plugins: { legend: { display: false }, tooltip: { callbacks: { title: (items) => items[0].label } } } }
             });
 
