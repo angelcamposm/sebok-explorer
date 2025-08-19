@@ -52,6 +52,10 @@
         .content-panel {
             min-height: 400px;
         }
+        .application-button.active {
+            background-color: #007ea7;
+            color: white;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -62,6 +66,7 @@
             <div class="hidden md:flex space-x-6">
                 <a href="#introduction" class="text-gray-600 hover:text-[#007ea7]">Introducción</a>
                 <a href="#core-explorer" class="text-gray-600 hover:text-[#007ea7]">Explorador</a>
+                <a href="#lifecycle" class="text-gray-600 hover:text-[#007ea7]">Ciclo de Vida</a>
                 <a href="#applications" class="text-gray-600 hover:text-[#007ea7]">Aplicaciones</a>
                 <a href="#future" class="text-gray-600 hover:text-[#007ea7]">Futuro</a>
             </div>
@@ -73,6 +78,7 @@
         <section id="introduction" class="text-center py-16">
             <h1 class="text-4xl md:text-6xl font-black text-[#003459] leading-tight">El Universo del SEBoK</h1>
             <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Una aplicación interactiva para navegar el Cuerpo de Conocimiento de la Ingeniería de Sistemas, la guía definitiva que define la disciplina.</p>
+            <p class="mt-6 text-base text-gray-500 max-w-3xl mx-auto">El SEBoK es una guía viva, en formato wiki, que establece una línea base de conocimiento universalmente aceptada. Su propósito es estructurar la disciplina, facilitar un entendimiento común y reducir los fallos en proyectos complejos al proporcionar un marco de referencia coherente y actualizado.</p>
             
             <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#007ea7]">
@@ -95,13 +101,14 @@
         <section id="core-explorer" class="py-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#003459]">Explorador del Núcleo de SEBoK</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">El SEBoK es más que un documento; es un ecosistema de conocimiento. Utiliza las pestañas para explorar su estructura, su relación con otros estándares y sus fundamentos teóricos.</p>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">El SEBoK es más que un documento; es un ecosistema de conocimiento. Utiliza las pestañas para explorar su estructura, sus fundamentos teóricos y su relación con otros estándares.</p>
             </div>
 
             <div class="bg-white rounded-lg shadow-xl overflow-hidden">
                 <div class="p-4 bg-gray-100 border-b border-gray-200">
                     <div id="nav-container" class="flex flex-wrap justify-center gap-2">
                         <button data-target="structure" class="nav-button active px-4 py-2 text-sm font-semibold text-gray-700 bg-white rounded-md shadow-sm hover:bg-gray-50">Estructura y Contenido</button>
+                        <button data-target="foundations" class="nav-button px-4 py-2 text-sm font-semibold text-gray-700 bg-white rounded-md shadow-sm hover:bg-gray-50">Fundamentos Clave</button>
                         <button data-target="ecosystem" class="nav-button px-4 py-2 text-sm font-semibold text-gray-700 bg-white rounded-md shadow-sm hover:bg-gray-50">Ecosistema del Conocimiento</button>
                     </div>
                 </div>
@@ -110,7 +117,7 @@
                     
                     <div id="structure-content" class="view-content">
                         <h3 class="text-2xl font-bold text-[#003459] mb-4">Las 8 Partes del SEBoK</h3>
-                        <p class="mb-8 text-gray-600">El conocimiento en SEBoK está organizado en 8 partes, desde la introducción hasta el conocimiento emergente. La Parte 3, "Ingeniería de Sistemas y Gestión", constituye el núcleo más extenso. Selecciona una parte para ver su resumen.</p>
+                        <p class="mb-8 text-gray-600">El conocimiento en SEBoK está organizado en 8 partes. Selecciona una para ver su resumen.</p>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <div>
                                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
@@ -134,29 +141,93 @@
                         </div>
                     </div>
 
-                    <div id="ecosystem-content" class="view-content hidden">
-                        <h3 class="text-2xl font-bold text-[#003459] mb-4">El Ecosistema del Conocimiento</h3>
-                        <p class="mb-8 text-gray-600 max-w-3xl">El SEBoK no es un documento aislado. Forma una tríada sinérgica con el Manual de INCOSE y la norma ISO/IEC/IEEE 15288, proporcionando una base coherente para la práctica, la certificación y la estandarización global.</p>
-                        <div class="flex flex-col md:flex-row justify-around items-center gap-8 text-center">
-                            <div class="w-full md:w-1/3 p-6 bg-white rounded-lg border-2 border-dashed border-[#00a8e8] hover:shadow-lg transition">
-                                <div class="text-5xl mb-3">📖</div>
-                                <h4 class="text-xl font-bold text-[#003459]">SEBoK</h4>
-                                <p class="font-semibold text-[#007ea7]">El "Porqué" y el "Qué"</p>
-                                <p class="mt-2 text-sm text-gray-600">La enciclopedia. Guía exhaustiva y referenciada del cuerpo de conocimiento completo.</p>
+                    <div id="foundations-content" class="view-content hidden">
+                        <h3 class="text-2xl font-bold text-[#003459] mb-4">El Núcleo Filosófico de la SE</h3>
+                        <p class="mb-8 text-gray-600 max-w-3xl">La Parte 2 del SEBoK eleva la SE a una disciplina con fundamentos rigurosos. Estos conceptos forman el marco mental para abordar problemas complejos de manera holística.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#00a8e8]">
+                                <h4 class="font-bold text-lg text-[#003459]">Ciencia de Sistemas</h4>
+                                <p class="mt-2 text-sm text-gray-600">Campo interdisciplinario que estudia los sistemas complejos en la naturaleza y la sociedad para identificar patrones que trascienden las disciplinas tradicionales.</p>
                             </div>
-                            <div class="w-full md:w-1/3 p-6 bg-white rounded-lg border-2 border-dashed border-[#007ea7] hover:shadow-lg transition">
-                                <div class="text-5xl mb-3">🛠️</div>
-                                <h4 class="text-xl font-bold text-[#003459]">Manual de INCOSE</h4>
-                                <p class="font-semibold text-[#007ea7]">El "Cómo"</p>
-                                <p class="mt-2 text-sm text-gray-600">La guía práctica. Resumen conciso para la práctica diaria y la certificación (SEP).</p>
+                            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#007ea7]">
+                                <h4 class="font-bold text-lg text-[#003459]">Pensamiento Sistémico</h4>
+                                <p class="mt-2 text-sm text-gray-600">El paradigma integrador para comprender e intervenir en situaciones problemáticas, basándose en los principios y conceptos del paradigma de sistemas.</p>
                             </div>
-                            <div class="w-full md:w-1/3 p-6 bg-white rounded-lg border-2 border-dashed border-[#90e0ef] hover:shadow-lg transition">
-                                <div class="text-5xl mb-3">📜</div>
-                                <h4 class="text-xl font-bold text-[#003459]">ISO/IEC/IEEE 15288</h4>
-                                <p class="font-semibold text-[#007ea7]">El "Qué" Normativo</p>
-                                <p class="mt-2 text-sm text-gray-600">El estándar. Define el marco de procesos del ciclo de vida del sistema.</p>
+                            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#90e0ef]">
+                                <h4 class="font-bold text-lg text-[#003459]">Modelado de Sistemas</h4>
+                                <p class="mt-2 text-sm text-gray-600">Uso de representaciones simplificadas (modelos) para promover la comprensión, análisis, especificación y verificación de sistemas complejos.</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div id="ecosystem-content" class="view-content hidden">
+                        <h3 class="text-2xl font-bold text-[#003459] mb-4">Ecosistema de Conocimiento y Estándares</h3>
+                        <p class="mb-8 text-gray-600 max-w-3xl">El SEBoK, el Manual de INCOSE y la norma ISO/IEC/IEEE 15288 forman una tríada sinérgica que proporciona una base coherente para la práctica, la certificación y la estandarización global.</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left text-gray-500">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">Característica</th>
+                                        <th scope="col" class="px-6 py-3">SEBoK</th>
+                                        <th scope="col" class="px-6 py-3">Manual de INCOSE</th>
+                                        <th scope="col" class="px-6 py-3">ISO/IEC/IEEE 15288</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Propósito</th>
+                                        <td class="px-6 py-4">Guía enciclopédica y referenciada del conocimiento.</td>
+                                        <td class="px-6 py-4">Guía concisa para la práctica y certificación (SEP).</td>
+                                        <td class="px-6 py-4">Estándar normativo que define procesos del ciclo de vida.</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 border-b">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Rol</th>
+                                        <td class="px-6 py-4">La "Enciclopedia" (El porqué)</td>
+                                        <td class="px-6 py-4">El "Libro de Texto" (El cómo)</td>
+                                        <td class="px-6 py-4">El "Estándar" (El qué)</td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Formato</th>
+                                        <td class="px-6 py-4">Wiki en línea (vivo)</td>
+                                        <td class="px-6 py-4">Libro publicado (estático)</td>
+                                        <td class="px-6 py-4">Documento de estándar formal</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-gray-200">
+
+        <section id="lifecycle" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#003459]">Procesos del Ciclo de Vida del Sistema</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">La Parte 3 del SEBoK, alineada con la norma ISO/IEC/IEEE 15288, detalla los procesos técnicos y de gestión que guían un sistema desde su concepción hasta su retiro.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#003459] mb-4">Procesos Técnicos</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">1.</span><div><strong class="text-gray-800">Definición de Concepto:</strong> Análisis de la misión y definición de las necesidades de las partes interesadas.</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">2.</span><div><strong class="text-gray-800">Diseño de Arquitectura:</strong> Creación de la estructura fundamental del sistema (componentes y relaciones).</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">3.</span><div><strong class="text-gray-800">Implementación:</strong> Realización de los elementos del sistema.</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">4.</span><div><strong class="text-gray-800">Integración, Verificación y Validación (IV&V):</strong> Ensamblar, comprobar que se construyó correctamente y que cumple el propósito.</div></li>
+                            <li class="flex items-start"><span class="text-[#007ea7] font-bold mr-2 text-xl">5.</span><div><strong class="text-gray-800">Mantenimiento y Retiro:</strong> Sostenimiento del sistema en operación y su disposición final segura.</div></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#003459] mb-4">Procesos de Gestión</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Planificación:</strong> Planificación técnica del proyecto de SE.</div></li>
+                            <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Gestión de Riesgos:</strong> Identificación y mitigación de riesgos técnicos.</div></li>
+                            <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Gestión de Configuración:</strong> Control de cambios y establecimiento de líneas base.</div></li>
+                            <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Gestión de la Información:</strong> Manejo de los datos y artefactos del proyecto.</div></li>
+                            <li class="flex items-start"><span class="text-[#00a8e8] mr-3 mt-1">●</span><div><strong class="text-gray-800">Gestión de Decisiones:</strong> Proceso formal para la toma de decisiones técnicas.</div></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -170,8 +241,24 @@
                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Los principios del SEBoK son independientes del dominio, lo que permite su aplicación en una amplia gama de industrias para gestionar la complejidad y entregar valor.</p>
             </div>
             <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
-                <div class="chart-container h-96 md:h-[500px] max-h-[500px]">
-                    <canvas id="applicationsBarChart"></canvas>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2">
+                        <div class="chart-container h-96 md:h-[500px] max-h-[500px] w-full max-w-full">
+                            <canvas id="applicationsBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003459] mb-4">Explora los Dominios</h3>
+                        <div id="application-buttons" class="flex flex-col space-y-2">
+                            <button data-app="aero" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Aeroespacial y Defensa</button>
+                            <button data-app="software" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Software y Ciberfísicos</button>
+                            <button data-app="health" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Sanitario (Healthcare)</button>
+                            <button data-app="auto" class="application-button w-full text-left p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition">Automoción</button>
+                        </div>
+                        <div id="application-details" class="mt-4 p-4 bg-gray-50 rounded-lg border min-h-[150px]">
+                            <p id="application-text" class="text-sm text-gray-700"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -203,145 +290,77 @@
         document.addEventListener('DOMContentLoaded', function() {
             
             const sebokData = {
-                1: { title: "Parte 1: Introducción al SEBoK", summary: "Establece el propósito, alcance y estructura de la guía. Presenta la disciplina de la Ingeniería de Sistemas (SE), su historia, valor económico y relación con otros campos. Orienta a diferentes tipos de usuarios sobre cómo aprovechar el SEBoK." },
-                2: { title: "Parte 2: Fundamentos de la SE", summary: "Constituye el núcleo filosófico y teórico. Cubre la ciencia de sistemas, el pensamiento sistémico, el uso de modelos y la aplicación del enfoque de sistemas, elevando la SE de una práctica empírica a una disciplina con fundamentos rigurosos." },
-                3: { title: "Parte 3: Ingeniería de Sistemas y Gestión", summary: "La sección más extensa, detalla la práctica central de la SE. Cubre modelos de ciclo de vida, enfoques de desarrollo (incluido Agile), procesos técnicos (requisitos, arquitectura) y procesos de gestión (riesgos, configuración), alineada con la norma ISO/IEC/IEEE 15288." },
-                4: { title: "Parte 4: Aplicaciones de la SE", summary: "Demuestra la universalidad y escalabilidad de la SE. Describe cómo aplicar los principios genéricos a diferentes contextos, como productos, servicios, empresas y sistemas de sistemas (SoS), incluyendo dominios específicos como el sanitario." },
-                5: { title: "Parte 5: Habilitación de la SE", summary: "Aborda el aspecto humano y organizacional. Describe el conocimiento necesario para habilitar y sostener la práctica de la SE a nivel de la organización, los equipos de proyecto y los individuos (competencias, roles, ética)." },
-                6: { title: "Parte 6: Disciplinas Relacionadas", summary: "Posiciona a la SE como una disciplina integradora. Explora las interacciones y superposiciones con campos clave como la gestión de proyectos, la ingeniería de software y los atributos de calidad (seguridad, fiabilidad, etc.)." },
-                7: { title: "Parte 7: Ejemplos de Implementación", summary: "Conecta la teoría con la práctica a través de estudios de caso del mundo real (p. ej., Telescopio Hubble, GPS). Analiza aplicaciones exitosas y lecciones aprendidas de fallos para ilustrar los conceptos de la SE." },
-                8: { title: "Parte 8: Conocimiento Emergente", summary: "Asegura la relevancia futura del SEBoK. Actúa como un área de incubación para temas nuevos y en rápida evolución como la Inteligencia Artificial, la Ingeniería Digital y MBSE, antes de que se integren en el cuerpo principal del conocimiento." }
+                1: { title: "Parte 1: Introducción", summary: "Establece el propósito, alcance y estructura de la guía. Presenta la disciplina de la Ingeniería de Sistemas (SE), su historia y su valor económico." },
+                2: { title: "Parte 2: Fundamentos", summary: "Constituye el núcleo filosófico y teórico. Cubre la ciencia de sistemas, el pensamiento sistémico y el uso de modelos para elevar la SE a una disciplina rigurosa." },
+                3: { title: "Parte 3: SE y Gestión", summary: "La sección más extensa, detalla la práctica central de la SE. Cubre modelos de ciclo de vida, procesos técnicos y de gestión, alineada con la norma ISO/IEC/IEEE 15288." },
+                4: { title: "Parte 4: Aplicaciones", summary: "Demuestra la universalidad de la SE, describiendo cómo aplicar sus principios a productos, servicios, empresas y sistemas de sistemas (SoS)." },
+                5: { title: "Parte 5: Habilitación", summary: "Aborda el aspecto humano y organizacional, describiendo el conocimiento necesario para sostener la práctica de la SE a nivel de la organización, equipos e individuos." },
+                6: { title: "Parte 6: Disciplinas Relacionadas", summary: "Posiciona a la SE como una disciplina integradora, explorando sus interacciones con la gestión de proyectos, la ingeniería de software y otras." },
+                7: { title: "Parte 7: Ejemplos", summary: "Conecta la teoría con la práctica a través de estudios de caso del mundo real, como el Telescopio Hubble, para ilustrar los conceptos de la SE." },
+                8: { title: "Parte 8: Conocimiento Emergente", summary: "Asegura la relevancia futura del SEBoK, actuando como un área de incubación para temas nuevos como la IA, la Ingeniería Digital y MBSE." }
             };
 
-            const partDetailsTitle = document.getElementById('part-title');
-            const partDetailsSummary = document.getElementById('part-summary');
+            const applicationData = {
+                aero: "Sector de origen de la SE. Es fundamental para gestionar la complejidad extrema, los largos ciclos de vida y los estrictos requisitos de seguridad y fiabilidad de los sistemas aeroespaciales y de defensa. El uso de MBSE es crucial aquí.",
+                software: "La SE proporciona el marco para gestionar el desarrollo de software complejo y sistemas ciberfísicos. Los modelos de ciclo de vida (p. ej., Modelo en V) son clave para alinear el desarrollo de hardware y software.",
+                health: "Un campo en crecimiento para la SE, que aborda desafíos sistémicos de seguridad del paciente y asequibilidad. Se aplica en el desarrollo de dispositivos médicos regulados y en la tecnología de información sanitaria.",
+                auto: "El vehículo moderno es un complejo sistema de sistemas. La SE es esencial para gestionar la integración de componentes mecánicos, electrónicos y de software, así como la cadena de suministro y la configuración del producto."
+            };
 
             function updatePartDetails(partNumber) {
-                const partData = sebokData[partNumber];
-                partDetailsTitle.textContent = partData.title;
-                partDetailsSummary.textContent = partData.summary;
+                const data = sebokData[partNumber];
+                document.getElementById('part-title').textContent = data.title;
+                document.getElementById('part-summary').textContent = data.summary;
             }
 
             document.querySelectorAll('.part-button').forEach(button => {
-                button.addEventListener('click', () => {
-                    const partNumber = button.dataset.part;
-                    updatePartDetails(partNumber);
-                });
+                button.addEventListener('click', () => updatePartDetails(button.dataset.part));
             });
             
             updatePartDetails('3');
 
             const navContainer = document.getElementById('nav-container');
-            const contentDisplay = document.getElementById('content-display');
-
             navContainer.addEventListener('click', (e) => {
                 if (e.target.tagName === 'BUTTON') {
                     const targetId = e.target.dataset.target;
-
                     navContainer.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
                     e.target.classList.add('active');
-
-                    contentDisplay.querySelectorAll('.view-content').forEach(content => {
-                        content.classList.add('hidden');
-                    });
-
+                    document.querySelectorAll('.view-content').forEach(content => content.classList.add('hidden'));
                     document.getElementById(`${targetId}-content`).classList.remove('hidden');
                 }
             });
 
-            const palette = {
-                darkBlue: '#003459',
-                mainBlue: '#007ea7',
-                midBlue: '#00a8e8',
-                lightBlue: '#90e0ef',
-                white: '#ffffff',
-                lightGray: '#f8f9fa'
-            };
+            const appButtonsContainer = document.getElementById('application-buttons');
+            function updateApplicationDetails(appKey) {
+                document.getElementById('application-text').textContent = applicationData[appKey];
+                appButtonsContainer.querySelectorAll('.application-button').forEach(btn => btn.classList.remove('active'));
+                appButtonsContainer.querySelector(`[data-app="${appKey}"]`).classList.add('active');
+            }
 
+            appButtonsContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    updateApplicationDetails(e.target.dataset.app);
+                }
+            });
+            updateApplicationDetails('aero');
+
+            const palette = { darkBlue: '#003459', mainBlue: '#007ea7' };
             const chartColors = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a', '#ff7c43', '#ffa600'];
 
             new Chart(document.getElementById('partsDonutChart'), {
-                type: 'doughnut',
-                data: {
-                    labels: ['P1: Intro', 'P2: Fundamentos', 'P3: SE y Gestión', 'P4: Aplicaciones', 'P5: Habilitación', 'P6: Relaciones', 'P7: Ejemplos', 'P8: Emergente'],
-                    datasets: [{
-                        data: [5, 15, 40, 15, 8, 7, 5, 5],
-                        backgroundColor: chartColors,
-                        borderColor: palette.white,
-                        borderWidth: 3
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { position: 'bottom', labels: { boxWidth: 15, padding: 10 } },
-                        tooltip: { callbacks: { title: (tooltipItems) => tooltipItems[0].label } }
-                    }
-                }
+                type: 'doughnut', data: { labels: ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8'], datasets: [{ data: [5, 15, 40, 15, 8, 7, 5, 5], backgroundColor: chartColors, borderColor: '#fff', borderWidth: 3 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 15, padding: 10 } }, tooltip: { callbacks: { title: (items) => sebokData[parseInt(items[0].label.slice(1))].title.split(':')[1].trim() } } } }
             });
             
             new Chart(document.getElementById('applicationsBarChart'), {
-                type: 'bar',
-                data: {
-                    labels: ['Aeroespacial y Defensa', 'Software y Ciberfísicos', 'Sanitario (Healthcare)', 'Automoción', 'Servicios', 'Empresarial'],
-                    datasets: [{
-                        label: 'Relevancia de la Aplicación de SE',
-                        data: [95, 92, 85, 88, 75, 70],
-                        backgroundColor: palette.mainBlue,
-                        borderColor: palette.darkBlue,
-                        borderWidth: 1,
-                        borderRadius: 5
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    indexAxis: 'y',
-                    scales: { x: { beginAtZero: true, max: 100, grid: { color: '#e9ecef' } }, y: { grid: { display: false } } },
-                    plugins: { legend: { display: false }, tooltip: { callbacks: { title: (tooltipItems) => tooltipItems[0].label } } }
-                }
+                type: 'bar', data: { labels: ['Aeroespacial y Defensa', 'Software y Ciberfísicos', 'Sanitario', 'Automoción', 'Servicios', 'Empresarial'], datasets: [{ label: 'Relevancia', data: [95, 92, 85, 88, 75, 70], backgroundColor: palette.mainBlue, borderRadius: 5 }] },
+                options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 100, grid: { color: '#e9ecef' } }, y: { grid: { display: false } } }, plugins: { legend: { display: false }, tooltip: { callbacks: { title: (items) => items[0].label } } } }
             });
 
             new Chart(document.getElementById('emergingTopicsBubbleChart'), {
                 type: 'bubble',
-                data: {
-                    datasets: [
-                        { label: 'Ing. de Sistemas Basada en Modelos (MBSE)', data: [{ x: 65, y: 40, r: 45 }], backgroundColor: 'rgba(0, 126, 167, 0.7)' },
-                        { label: 'Ingeniería Digital', data: [{ x: 35, y: 60, r: 40 }], backgroundColor: 'rgba(0, 168, 232, 0.7)' },
-                        { label: 'Inteligencia Artificial (IA)', data: [{ x: 20, y: 30, r: 35 }], backgroundColor: 'rgba(144, 224, 239, 0.7)' },
-                        { label: 'Sistemas Socio-Técnicos', data: [{ x: 75, y: 70, r: 25 }], backgroundColor: 'rgba(0, 52, 89, 0.7)' }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: {
-                            display: false,
-                            min: 0,
-                            max: 100
-                        },
-                        y: {
-                            display: false,
-                            min: 0,
-                            max: 100
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: true,
-                            position: 'bottom'
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return `${context.dataset.label}: Impacto ${context.raw.r}`;
-                                }
-                            }
-                        }
-                    }
-                }
+                data: { datasets: [ { label: 'MBSE', data: [{ x: 65, y: 40, r: 45 }], backgroundColor: 'rgba(0, 126, 167, 0.7)' }, { label: 'Ingeniería Digital', data: [{ x: 35, y: 60, r: 40 }], backgroundColor: 'rgba(0, 168, 232, 0.7)' }, { label: 'Inteligencia Artificial', data: [{ x: 20, y: 30, r: 35 }], backgroundColor: 'rgba(144, 224, 239, 0.7)' }, { label: 'Sistemas Socio-Técnicos', data: [{ x: 75, y: 70, r: 25 }], backgroundColor: 'rgba(0, 52, 89, 0.7)' } ] },
+                options: { responsive: true, maintainAspectRatio: false, scales: { x: { display: false, min: 0, max: 100 }, y: { display: false, min: 0, max: 100 } }, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: Impacto ${ctx.raw.r}` } } } }
             });
         });
     </script>
